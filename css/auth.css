@@ -1,0 +1,157 @@
+/* =============================
+   Drivex Auth Page (Bootstrap)
+   Pink top gradient background
+   Tabs like pill buttons
+   SEE button + Remember row
+============================= */
+
+:root{
+  --bg1: #e94b8f;
+  --bg2: #d83f86;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+
+  --primary: #0a9a57;
+  --primary-dark: #07874c;
+
+  --shadow: 0 18px 60px rgba(0,0,0,.18);
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  min-height: 100vh;
+  background: #f2f3f5;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color: var(--text);
+  position: relative;
+}
+
+/* Pink top bar like your screenshot */
+body::before{
+  content:"";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 260px;
+  background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+  z-index: -1;
+}
+
+/* Card */
+.auth-card{
+  width: min(520px, 94vw);
+  margin: 120px auto 0;
+  background: var(--card);
+  border-radius: 18px;
+  padding: 28px 26px 26px;
+  box-shadow: var(--shadow);
+}
+
+/* Logo */
+.auth-logo{
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.auth-logo img{
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  margin-bottom: 6px;
+}
+
+.auth-logo h1{
+  margin: 0;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+
+/* Tabs style (override bootstrap pills) */
+.auth-tabs .nav-link{
+  border-radius: 999px !important;
+  border: 1px solid var(--border) !important;
+  color: var(--muted) !important;
+  background: #fff !important;
+  font-weight: 800;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-tabs .nav-link.active{
+  background: var(--primary) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+}
+
+/* Inputs */
+.form-label{
+  font-weight: 700;
+  color: #111827;
+}
+
+.form-control{
+  height: 44px;
+  border-radius: 8px;
+  border-color: var(--border);
+}
+
+.form-control:focus{
+  border-color: rgba(10,154,87,.55);
+  box-shadow: 0 0 0 4px rgba(10,154,87,.18);
+}
+
+/* Primary button -> green */
+.btn-primary{
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  border-radius: 10px;
+  height: 48px;
+  font-weight: 900;
+  letter-spacing: .2px;
+}
+
+.btn-primary:hover{
+  background: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
+}
+
+/* Remember row */
+.remember-row{
+  user-select: none;
+  color: var(--muted);
+}
+
+/* SEE button */
+.see-btn{
+  position: absolute;
+  right: 12px;
+  top: 38px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--muted);
+  cursor: pointer;
+  user-select: none;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.see-btn:hover{
+  color: #111827;
+  border-color: rgba(10,154,87,.4);
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px){
+  body::before{ height: 200px; }
+  .auth-card{ margin-top: 90px; padding: 24px 18px; }
+}

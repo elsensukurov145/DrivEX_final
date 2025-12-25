@@ -1,0 +1,7 @@
+.env
+/.idea/
+test/
+frontend/
+php/config.php
+frontend.zip
+database.zip
