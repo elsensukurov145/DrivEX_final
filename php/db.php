@@ -2,7 +2,7 @@
 $host = 'mysql-elshanbackend.alwaysdata.net';  
 $db   = 'elshanbackend_user';    
 $user = '443596';                       
-$pass = 'Elshan2006';
+$pass = 'XXXXXXX';
 
 $config = include("config.php");
 
